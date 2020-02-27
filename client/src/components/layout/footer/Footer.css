@@ -1,0 +1,66 @@
+footer {
+  width: 100%;
+  /* background: black; */
+  background:black;
+  padding: 1.5em;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+  /* ul li {
+    color: white;
+    list-style: none;
+  }
+
+  .fab{
+    font-size:1.5em;
+    padding:10px;
+    color:white
+}
+
+.fab:hover{
+  color:gold;
+} */
+
+/* SOCIAL FOLLOW STUFF */
+.social-title {
+  /* font-size: 32px;
+  font-weight: 500; */
+  /* font-style: italic; */
+  /* color: #333333; */
+  color: white;
+}
+
+.social-container {
+  /* background: #eee; */
+  padding: 25px 50px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: white;
+}

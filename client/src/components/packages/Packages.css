@@ -1,0 +1,25 @@
+
+.card-body ul li {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+.card { background-color: transparent; 
+color: gold;
+}
+
+
+.btn {
+  background:black !important;
+  color:gold;
+  border: 1px solid gold !important;
+}
+
+.mobile{
+  display: none;
+}
+
+@media only screen and (max-device-width: 500px) {
+  .normal{display:none;}
+  .mobile{display:inline-block}
+}
