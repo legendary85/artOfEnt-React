@@ -9,6 +9,8 @@ const creds = require('../../config/config.js');
 // @access   Public
 router.get('/', (req, res) => res.send('Email Route'))
 
+
+
 // @route    Post api/form
 // @desc     Post Email Route
 // @access   Public
