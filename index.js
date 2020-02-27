@@ -2,7 +2,11 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
 const creds = require('./config/config.js');
+// const connectEmail = require('./config/db');
 const app = express();
+
+// Connect Email
+// connectEmail();
 
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: false }))
@@ -29,6 +33,8 @@ app.post('/api/form', (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
+        // user: connectEmail.USER,
+        // pass: connectEmail.PASS
         user: creds.USER,
         pass: creds.PASS
       },
@@ -38,6 +44,8 @@ app.post('/api/form', (req, res) => {
     });
 
     let mailOptions = {
+      // from: connect.FROM,
+      // to: connectEmail.TO,
       from: creds.FROM,
       to: creds.TO,
       subject: 'New Message',
