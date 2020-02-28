@@ -8,19 +8,23 @@
 .aboutUs{
   padding-bottom: 1.5rem;
   color: gold;
+  font-family: 'Source Serif Pro',sans-serif ;
+  text-transform: uppercase
+  ;
 }
 
 .person {
-  border: 10px solid transparent;
+  /* border: 10px solid transparent; */
+  border: 10px solid gold;
   margin-bottom: 25px;
   width: 80%;
   height: 80%;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   border-radius: 50%;
 }
 
 .person:hover {
-  border-color: #f1f1f1;
+  /* border-color: #f1f1f1; */
   cursor: pointer;
 }
 

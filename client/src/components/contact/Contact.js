@@ -63,6 +63,7 @@ const Contact = () => {
     <Route exact path="/contact">
       {dataisLoaded ? <Redirect to="/submitted" /> :
         <div className='container'>
+          <h3 className='contactUs'>Contact us</h3>
           <Form id='contact-form' onSubmit={e => {
             onSubmit(e);
             setFormData({

@@ -16,7 +16,12 @@ body{
   overflow: hidden;
   margin-bottom: 100px;
   text-align: center;
-  color: goldenrod;
+  color: gold;
+  text-transform: uppercase;
+}
+
+.display-3{
+  margin: 5rem;
 }
 
 /* iPad */

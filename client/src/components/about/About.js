@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import blankImg from '../../assets/img/download.jpg'
+// import blankImg from '../../assets/img/download.jpg'
+import blankImg from '../../assets/img/dj.png'
 
 import './About.css'
 

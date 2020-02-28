@@ -1,3 +1,10 @@
+.contactUs {
+  color: gold;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 2rem;
+}
+
 form {
   margin-top: 50px;
   height: 100vh;

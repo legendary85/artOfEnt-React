@@ -1,4 +1,6 @@
-
+.package-header{
+  text-transform: uppercase;
+}
 .card-body ul li {
   color: #fff !important;
   background-color: transparent !important;
