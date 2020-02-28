@@ -37,7 +37,8 @@ footer {
 }
 
 a.social {
-  margin: 0 1rem;
+  margin: 0 .5rem;
+  margin-bottom: .5rem;
   transition: transform 250ms;
   display: inline-block;
 }
@@ -62,5 +63,12 @@ a.twitter {
 }
 
 a.instagram {
-  color: white;
+  /* color: white; */
+  color: #eb3223
+}
+
+@media only screen and (max-device-width: 570px) {
+  .social-title {
+    font-size: 3vw;
+  }
 }

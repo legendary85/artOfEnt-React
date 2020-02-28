@@ -27,11 +27,11 @@ export class About extends Component {
             </div> */}
           </div>
           <div className="col-sm-4">
-            <p><strong>DJ Artwork</strong></p>
+            {/* <p><strong>DJ Artwork</strong></p> */}
             {/* <a href="#demo" data-toggle="collapse">
               <img className='img-circle person' src={artwork} alt="Random Name"></img>
             </a> */}
-            <img className='img-circle person' src={blankImg} alt="Random Name"></img>
+            {/* <img className='img-circle person' src={blankImg} alt="Random Name"></img> */}
             {/* <div id="demo" className="collapse">
               <p>Mobile DJ</p>
               <p>Love to Travel</p>
