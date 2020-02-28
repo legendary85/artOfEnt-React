@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const creds = require('../../config/config.js');
+const { check, validationResult } = require('express-validator');
 
 
 // @route    Get api/email
@@ -14,8 +15,28 @@ router.get('/', (req, res) => res.send('Email Route'))
 // @route    Post api/form
 // @desc     Post Email Route
 // @access   Public
-router.post('/', (req, res) => {
+router.post('/', [
+  // validation using express-validator
+  check('name', 'Name is required')
+    .not()
+    .isEmpty(),
+  check('email', 'Please include a valid email').isEmail(),
+  check('number', 'Please submit phone number in 1115557777 format.').isLength({ min: 10 }),
+  check('select', 'Please make a selection.').not()
+    .isEmpty(),
+  check('date', 'Please select a future date.').not()
+    .isEmpty(),
+  check('message', 'Please submit a message with a minimum of 5 characters.').not()
+    .isEmpty().isLength({ min: 5 }),
+], (req, res) => {
+  // Object of data being sent to route
   console.log(req.body)
+
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+  res.send('User route')
 
   nodemailer.createTestAccount((err, account) => {
     const htmlEmail = `

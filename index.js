@@ -3,8 +3,11 @@ const bodyparser = require('body-parser');
 const app = express();
 
 
-app.use(bodyparser.json())
-app.use(bodyparser.urlencoded({ extended: false }))
+// Init Middleware with express we no longer need bodyparser
+app.use(express.json({ extended: false }))
+
+// app.use(bodyparser.json())
+// app.use(bodyparser.urlencoded({ extended: false }))
 
 // Define Routes
 app.use('/api/form', require('./routes/api/email'))
