@@ -33,7 +33,7 @@ router.post('/', [
 ],
   (req, res) => {
     // Object of data being sent to route
-    console.log(req.body)
+    // console.log(req.body)
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -80,11 +80,11 @@ router.post('/', [
 
       transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
-          return console.log(err)
+          // return console.log(err)
         }
 
-        console.log('Message sent: %s', info.message)
-        console.log('Message URL: %s', nodemailer.getTestMessageUrl(info))
+        // console.log('Message sent: %s', info.message)
+        // console.log('Message URL: %s', nodemailer.getTestMessageUrl(info))
       })
 
     })

@@ -32,7 +32,7 @@ const Contact = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
 
     // Maybe use for redux (Maybe)
     const newClient = {
@@ -46,12 +46,12 @@ const Contact = () => {
 
     }
     try {
-      console.log('Submitted!')
+      // console.log('Submitted!')
       const res = await axios.post('/api/form', newClient);
-      console.log(res.data);
-      alert('Message Sent!')
+      // console.log(res.data);
+      // alert('Message Sent!')
     } catch (err) {
-      console.log(err.response.data);
+      // console.log(err.response.data);
     }
   }
 
