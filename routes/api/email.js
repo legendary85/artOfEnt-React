@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
-const creds = require('../../config/config.js');
+// const creds = require('../../config/config.js');
+const creds = require('../../config/default.json')
+
 const { check, validationResult } = require('express-validator');
 
 
