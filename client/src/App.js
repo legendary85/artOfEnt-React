@@ -17,7 +17,7 @@ import store from './store';
 import './App.css';
 
 const App = () => (
-  <Provider>
+  <Provider store={store}>
     <Router>
       <Fragment>
         <NavigationBar />
