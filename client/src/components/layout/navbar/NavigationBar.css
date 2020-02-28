@@ -1,3 +1,17 @@
-.nav-item:hover, .nav-item:active {
+NavItem:hover, NavItem:active {
   color:gold !important;
   }
+
+  .navBar {
+    border-bottom: 2px solid gold;
+    padding: 1rem;
+  }
+
+    .mr-2{
+      border: 1px solid gold !important;
+    }
+  /* .goldText {
+    color: gold !important
+  } */
+
+  

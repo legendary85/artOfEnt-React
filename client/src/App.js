@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import NavigationBar from './components/layout/navbar/NavigationBar.js'
 import Landing from './components/landing/Landing.js'
@@ -12,26 +12,25 @@ import Footer from './components/layout/footer/Footer.js'
 
 import './App.css';
 
-function App() {
-  return (
+const App = () => (
 
-
-    <Router>
+  <Router>
+    <Fragment>
       <NavigationBar />
-      <section>
+      <Route exact path='/' component={Landing}></Route>
+      <section className='container'>
         <Switch>
-          <Route exact path='/' component={Landing}></Route>
           <Route exact path='/about' component={About}></Route>
           <Route exact path='/packages' component={Packages}></Route>
           <Route exact path='/contact' component={Contact}></Route>
           <Route exact path='/submitted' component={Submitted}></Route>
-          <Route path='/' render={() => <div style={{ color: 'white', display: 'grid', justifyItems: 'center', height: '70vh', alignItems: 'center' }}>404</div>}></Route>
+          {/* <Route path='/' render={() => <div style={{ color: 'white', display: 'grid', justifyItems: 'center', height: '70vh', alignItems: 'center' }}>404</div>}></Route> */}
           {/* <Route exact path='/contact' component={ContactForm}></Route> */}
         </Switch>
       </section>
-      <Footer style={{ color: 'blue' }} />
-    </Router>
-  );
-}
+      <Footer />
+    </Fragment>
+  </Router>
+)
 
 export default App;

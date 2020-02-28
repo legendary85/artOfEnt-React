@@ -1,11 +1,7 @@
 
 import React, { Fragment, useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-
-
-
-
-
+import './NavigationBar.css'
 
 
 const NavigationBar = () => {
@@ -16,15 +12,14 @@ const NavigationBar = () => {
 
   return <Fragment>
 
-
     <div>
-      <Navbar color="faded" dark>
+      <Navbar color="faded" dark className='navBar'>
         <NavbarBrand href="/" className="mr-auto">Art of Entertainment</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
-            <NavItem>
-              <NavLink href="/about">About</NavLink>
+            <NavItem >
+              <NavLink className="goldText" href="/about">About</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/packages">Packages</NavLink>
@@ -38,9 +33,6 @@ const NavigationBar = () => {
     </div>
 
   </Fragment>
-
-
-
 
 }
 

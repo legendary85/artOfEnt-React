@@ -13,27 +13,26 @@ import axios from 'axios'
 // component level state
 const Contact = () => {
   const [formData, setFormData] = useState({
+    // Default values
     name: '',
     email: '',
     message: '',
     number: '',
     select: '',
     date: '',
-    phone: '',
     dataisLoaded: false
   });
 
 
   // Destructure data
-  const { name, email, message, number, select, date, phone, dataisLoaded } = formData;
+  const { name, email, message, number, select, date, dataisLoaded } = formData;
 
-  // [e.target.name] targets the of eact input
+  // [e.target.name] targets the of eact input: key
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = async e => {
     e.preventDefault();
-    // alert('Hello!')
-    console.log(`Submitted`)
+    console.log(formData);
 
     // Maybe use for redux (Maybe)
     const newClient = {
@@ -43,16 +42,16 @@ const Contact = () => {
       number,
       select,
       date,
-      phone,
       dataisLoaded
 
     }
     try {
       console.log('Submitted!')
-      await axios.post('/api/form', newClient);
+      const res = await axios.post('/api/form', newClient);
+      console.log(res.data);
       alert('Message Sent!')
     } catch (err) {
-      console.log(err.response);
+      console.log(err.response.data);
     }
   }
 
