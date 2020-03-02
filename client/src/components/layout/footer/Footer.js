@@ -18,7 +18,7 @@ export default function Footer() {
           href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="youtube social">
           <FontAwesomeIcon icon={faYoutube} size="1x" />
         </a> */}
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="facebook social">
+        <a href="https://www.facebook.com/pg/djartwork1/events/" target="_blank" rel="noopener noreferrer" className="facebook social">
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
         {/* <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="twitter social">
